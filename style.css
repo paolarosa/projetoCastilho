@@ -208,7 +208,7 @@ header .logo img {
 .socialResponsibility,
 .socialenviromentResponsibility {
     width: 45%;
-    color: white;
+    color: #e5e5e5;
     margin: 20px 0;
 }
 
@@ -217,12 +217,12 @@ header .logo img {
 }
 
 .socialResponsibility p {
-    color: white;
+    color: #e5e5e5;
 
 }
 
 .socialenviromentResponsibility p {
-    color: #797979;
+    color: #e5e5e5;
     margin-bottom: 25px;
 }
 
