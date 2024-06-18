@@ -6,7 +6,8 @@
 
 body {
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-}
+  }
+
 
 header {
     position: fixed;
@@ -44,7 +45,7 @@ header .container {
 
 .contact span {
     font-size: 16px;
-    color: #FBCC1D
+    color: #FBCC1D 
 }
 
 
@@ -61,7 +62,7 @@ header .logo img {
     margin-right: 10px
 }
 
-.contact span {
+.contact span{
     color: white;
 }
 
@@ -99,7 +100,7 @@ header .logo img {
 }
 
 .logo-container img {
-    width: 300px;
+    width: 350px;
 }
 
 .titleSection {
@@ -132,7 +133,6 @@ header .logo img {
     display: flex;
     width: max-content;
     animation: slide 30s linear infinite;
-    overflow: hidden;
 }
 
 .service {
@@ -157,13 +157,12 @@ header .logo img {
     0% {
         transform: translateX(0);
     }
-
     100% {
-        transform: translateX(-100%);
+        transform: translateX(calc(-250px * 6)); /* Número de imagens para o loop */
     }
 }
 
-.initialPage {
+.initialPage{
     height: 100%;
 }
 
@@ -182,22 +181,21 @@ header .logo img {
     text-align: center;
     margin-bottom: 20px;
 }
-
-.firstSectionTeam {
+.firstSectionTeam{
     width: 70%;
     padding: 10px 20px 0px 20px;
     align-items: center;
 }
 
-.firstSectionTeam p {
+.firstSectionTeam p{
     padding-top: 10px;
 }
 
-.firstSectionTeam h2 {
+.firstSectionTeam h2{
     font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
-.secondSectionTeam {
+.secondSectionTeam{
     padding: 10px 20px 0px 20px;
     display: flex;
     width: 70%;
@@ -206,27 +204,27 @@ header .logo img {
 }
 
 .socialResponsibility,
-.socialenviromentResponsibility {
+.socialenviromentResponsibility{
     width: 45%;
     color: white;
     margin: 20px 0;
 }
 
-.socialResponsibility h3 {
+.socialResponsibility h3{
     margin-bottom: 15px;
 }
 
-.socialResponsibility p {
-    color: white;
-
+.socialResponsibility p{
+    color: #797979;
+    
 }
 
-.socialenviromentResponsibility p {
+.socialenviromentResponsibility p{
     color: #797979;
     margin-bottom: 25px;
 }
 
-.titleSocial {
+.titleSocial{
     margin-top: 35px;
     display: flex;
     justify-content: space-around;
@@ -282,7 +280,6 @@ footer {
     padding: 10px;
     bottom: 0;
     width: 100%;
-
 }
 
 
@@ -305,7 +302,6 @@ footer {
     justify-content: center;
 
 }
-
 .cards p {
     color: #fff;
     font-size: 10px;
@@ -338,4 +334,8 @@ footer {
 .card a:hover {
     color: #FBCC1D;
 
+}
+
+.direitosReservados{
+    font-size: 10px;
 }
