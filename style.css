@@ -5,109 +5,338 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  }
 
 header {
     position: fixed;
     width: 100%;
-    background: #000;
+    height: 70px;
+    background: #000000;
     color: #fff;
     padding: 10px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     z-index: 1000;
 }
 
+header .container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20 20px;
+}
+
+.social {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.social img {
+    margin-right: 10px;
+    width: 25px;
+    cursor: pointer
+}
+
+.contact span {
+    font-size: 16px;
+    color: #FBCC1D 
+}
+
+
 header .logo img {
-    width: 150px;
+    width: 160px;
+    top: -20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-header .contact {
-    margin-right: 20px;
+.contact img {
+    width: 20px;
+    margin-right: 10px
 }
 
-nav {
-    background: #fff;
-    padding: 10px;
-    text-align: center;
+.contact span{
+    color: white;
 }
 
-nav ul {
-    list-style: none;
+.social {
+    width: 100%;
+    max-width: 1000px;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+.social-border {
+    border-radius: 30%;
+    border: 1px solid white
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
+.contrast {
+    filter: invert(100%) brightness(100%) contrast(100%);
+}
+
+.social a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social a:last-child {
+    margin-right: 0;
 }
 
 #intro {
-    padding: 100px 20px 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px 20px;
     text-align: center;
+
+}
+
+.logo-container img {
+    width: 350px;
+}
+
+.titleSection {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+    background-color: #fff;
+    border-radius: 8px;
+
+}
+
+.titleSection p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 #services {
+    padding: 10px 30px 70px 30px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.slider-wrapper {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
+    width: max-content;
+    animation: slide 30s linear infinite;
 }
 
 .service {
+    flex: 0 0 250px;
     margin: 10px;
     text-align: center;
 }
 
 .service img {
-    width: 200px;
-    height: 150px;
+    width: 250px;
+    height: 230px;
     object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+.service img:hover {
+    filter: brightness(50%);
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 6)); /* Número de imagens para o loop */
+    }
+}
+
+.initialPage{
+    height: 100%;
 }
 
 #team {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    align-items: center;
+    color: white;
     padding: 20px;
-    background: #f4f4f4;
+    background: #1a1a1a;
 }
 
 #team h2 {
+    color: white;
     text-align: center;
     margin-bottom: 20px;
 }
 
-.responsibility {
+.firstSectionTeam{
+    width: 70%;
+    padding: 10px 20px 0px 20px;
+    align-items: center;
+}
+
+.firstSectionTeam p{
+    padding-top: 10px;
+}
+
+.firstSectionTeam h2{
+    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+.secondSectionTeam{
+    padding: 10px 20px 0px 20px;
+    display: flex;
+    width: 70%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.socialResponsibility,
+.socialenviromentResponsibility{
+    width: 45%;
+    color: white;
     margin: 20px 0;
 }
 
+.socialResponsibility h3{
+    margin-bottom: 15px;
+}
+
+.socialResponsibility p{
+    color: #797979;
+    
+}
+
+.socialenviromentResponsibility p{
+    color: #797979;
+    margin-bottom: 25px;
+}
+
+.titleSocial{
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+}
+
 .responsibility h3 {
+    color: white;
     margin-bottom: 10px;
 }
 
 #about {
-    padding: 20px;
-    text-align: center;
+    padding: 40px 20px;
+    margin: 40px 0;
 }
 
-#about img {
-    width: 300px;
-    height: auto;
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about-text {
+    width: calc(50% - 20px);
+}
+
+.about-text h2 {
+    font-size: 32px;
+}
+
+.about-text p {
+    text-align: justify;
     margin-top: 20px;
+}
+
+.about-image {
+    width: calc(40% - 20px);
+    text-align: right;
+}
+
+.about-image img {
+    max-width: 100%;
 }
 
 footer {
     background: #000;
     color: #fff;
+    height: 300px;
     text-align: center;
+    position: relative;
     padding: 10px;
-    position: fixed;
     bottom: 0;
     width: 100%;
+
+}
+
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container h2 {
+    font-size: 24px;
+    margin: 10px;
+    height: 100%;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+
+}
+
+.cards p {
+    color: #fff;
+    font-size: 10px;
+}
+
+.card {
+    padding: 40px 0;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 40px;
+}
+
+.card h3 {
+    font-size: 16px;
+}
+
+.card a {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer
+}
+
+.card a:hover {
+    color: #FBCC1D;
+
+}
+
+.direitosReservados{
+    font-size: 10px;
 }
